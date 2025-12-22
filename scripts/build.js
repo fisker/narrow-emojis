@@ -1,5 +1,6 @@
 import assert from 'node:assert'
 import {inspect} from 'node:util'
+import * as cheerio from 'cheerio'
 import emojiRegex from 'emoji-regex'
 import {outdent} from 'outdent'
 import regenerate from 'regenerate'
@@ -7,32 +8,19 @@ import stringWidth from 'string-width'
 import writePrettierFile from 'write-prettier-file'
 import {downloadText, updateFile} from './utilities.js'
 
-const DATA_URL = new URL(
-  'https://www.unicode.org/Public/latest/emoji/emoji-test.txt',
-)
+const DATA_URL = new URL('https://unicode.org/emoji/charts/emoji-variants.html')
 const CACHE_DIRECTORY = new URL('../.cache/', import.meta.url)
 
 function* parse(text) {
-  const lines = text.split('\n')
-  for (const line of lines) {
-    if (!line || line.startsWith('#')) {
-      continue
-    }
+  const $ = cheerio.load(text)
 
-    const codePointsEndIndex = line.indexOf('; ')
-    assert.ok(codePointsEndIndex !== -1)
-    const codePoints = line.slice(0, codePointsEndIndex).trim().split(' ')
+  for (const tr of $('table tr:has(td)')) {
+    const codePoints = $(tr).find('td.code.cchars > a').text().trim().split(' ')
     const character = String.fromCodePoint(
       ...codePoints.map((hex) => Number.parseInt(hex, 16)),
     )
-
-    const statusEndIndex = line.indexOf('# ', codePointsEndIndex)
-    assert.ok(statusEndIndex !== -1)
-
-    const status = line.slice(codePointsEndIndex + 2, statusEndIndex).trim()
-    const explanation = line.slice(statusEndIndex + 2)
-
-    yield {codePoints, character, status, explanation}
+    const description = $(tr).find('td:last-child').text()
+    yield {character, codePoints, description}
   }
 }
 
@@ -49,7 +37,7 @@ const isSingleEmoji = (character) => {
 
 const text = await downloadText(
   DATA_URL,
-  new URL('./emoji-test.txt', CACHE_DIRECTORY),
+  new URL('./emoji-variants.html', CACHE_DIRECTORY),
 )
 
 const array = parse(text)
@@ -79,11 +67,11 @@ await writePrettierFile(
   outdent`
     export const narrowEmojiCharacters = [
       ${array
-        .map(({character, codePoints, explanation}) =>
+        .map(({character, codePoints, description}) =>
           [
             `/* ${codePoints.join(' ').padStart(maxCodePointsLength)} */`,
             `${JSON.stringify(character)},`,
-            `// ${explanation}`,
+            `// ${description}`,
           ].join(' '),
         )
         .join('\n')}
