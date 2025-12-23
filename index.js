@@ -1,205 +1,205 @@
 export const narrowEmojiCharacters = [
-  /*  00A9 */ '©', // © E0.6 copyright
-  /*  00AE */ '®', // ® E0.6 registered
-  /*  203C */ '‼', // ‼ E0.6 double exclamation mark
-  /*  2049 */ '⁉', // ⁉ E0.6 exclamation question mark
-  /*  2122 */ '™', // ™ E0.6 trade mark
-  /*  2139 */ 'ℹ', // ℹ E0.6 information
-  /*  2194 */ '↔', // ↔ E0.6 left-right arrow
-  /*  2195 */ '↕', // ↕ E0.6 up-down arrow
-  /*  2196 */ '↖', // ↖ E0.6 up-left arrow
-  /*  2197 */ '↗', // ↗ E0.6 up-right arrow
-  /*  2198 */ '↘', // ↘ E0.6 down-right arrow
-  /*  2199 */ '↙', // ↙ E0.6 down-left arrow
-  /*  21A9 */ '↩', // ↩ E0.6 right arrow curving left
-  /*  21AA */ '↪', // ↪ E0.6 left arrow curving right
-  /*  2328 */ '⌨', // ⌨ E1.0 keyboard
-  /*  23CF */ '⏏', // ⏏ E1.0 eject button
-  /*  23ED */ '⏭', // ⏭ E0.7 next track button
-  /*  23EE */ '⏮', // ⏮ E0.7 last track button
-  /*  23EF */ '⏯', // ⏯ E1.0 play or pause button
-  /*  23F1 */ '⏱', // ⏱ E1.0 stopwatch
-  /*  23F2 */ '⏲', // ⏲ E1.0 timer clock
-  /*  23F8 */ '⏸', // ⏸ E0.7 pause button
-  /*  23F9 */ '⏹', // ⏹ E0.7 stop button
-  /*  23FA */ '⏺', // ⏺ E0.7 record button
-  /*  24C2 */ 'Ⓜ', // Ⓜ E0.6 circled M
-  /*  25AA */ '▪', // ▪ E0.6 black small square
-  /*  25AB */ '▫', // ▫ E0.6 white small square
-  /*  25B6 */ '▶', // ▶ E0.6 play button
-  /*  25C0 */ '◀', // ◀ E0.6 reverse button
-  /*  25FB */ '◻', // ◻ E0.6 white medium square
-  /*  25FC */ '◼', // ◼ E0.6 black medium square
-  /*  2600 */ '☀', // ☀ E0.6 sun
-  /*  2601 */ '☁', // ☁ E0.6 cloud
-  /*  2602 */ '☂', // ☂ E0.7 umbrella
-  /*  2603 */ '☃', // ☃ E0.7 snowman
-  /*  2604 */ '☄', // ☄ E1.0 comet
-  /*  260E */ '☎', // ☎ E0.6 telephone
-  /*  2611 */ '☑', // ☑ E0.6 check box with check
-  /*  2618 */ '☘', // ☘ E1.0 shamrock
-  /*  261D */ '☝', // ☝ E0.6 index pointing up
-  /*  2620 */ '☠', // ☠ E1.0 skull and crossbones
-  /*  2622 */ '☢', // ☢ E1.0 radioactive
-  /*  2623 */ '☣', // ☣ E1.0 biohazard
-  /*  2626 */ '☦', // ☦ E1.0 orthodox cross
-  /*  262A */ '☪', // ☪ E0.7 star and crescent
-  /*  262E */ '☮', // ☮ E1.0 peace symbol
-  /*  262F */ '☯', // ☯ E0.7 yin yang
-  /*  2638 */ '☸', // ☸ E0.7 wheel of dharma
-  /*  2639 */ '☹', // ☹ E0.7 frowning face
-  /*  263A */ '☺', // ☺ E0.6 smiling face
-  /*  2640 */ '♀', // ♀ E4.0 female sign
-  /*  2642 */ '♂', // ♂ E4.0 male sign
-  /*  265F */ '♟', // ♟ E11.0 chess pawn
-  /*  2660 */ '♠', // ♠ E0.6 spade suit
-  /*  2663 */ '♣', // ♣ E0.6 club suit
-  /*  2665 */ '♥', // ♥ E0.6 heart suit
-  /*  2666 */ '♦', // ♦ E0.6 diamond suit
-  /*  2668 */ '♨', // ♨ E0.6 hot springs
-  /*  267B */ '♻', // ♻ E0.6 recycling symbol
-  /*  267E */ '♾', // ♾ E11.0 infinity
-  /*  2692 */ '⚒', // ⚒ E1.0 hammer and pick
-  /*  2694 */ '⚔', // ⚔ E1.0 crossed swords
-  /*  2695 */ '⚕', // ⚕ E4.0 medical symbol
-  /*  2696 */ '⚖', // ⚖ E1.0 balance scale
-  /*  2697 */ '⚗', // ⚗ E1.0 alembic
-  /*  2699 */ '⚙', // ⚙ E1.0 gear
-  /*  269B */ '⚛', // ⚛ E1.0 atom symbol
-  /*  269C */ '⚜', // ⚜ E1.0 fleur-de-lis
-  /*  26A0 */ '⚠', // ⚠ E0.6 warning
-  /*  26A7 */ '⚧', // ⚧ E13.0 transgender symbol
-  /*  26B0 */ '⚰', // ⚰ E1.0 coffin
-  /*  26B1 */ '⚱', // ⚱ E1.0 funeral urn
-  /*  26C8 */ '⛈', // ⛈ E0.7 cloud with lightning and rain
-  /*  26CF */ '⛏', // ⛏ E0.7 pick
-  /*  26D1 */ '⛑', // ⛑ E0.7 rescue worker’s helmet
-  /*  26D3 */ '⛓', // ⛓ E0.7 chains
-  /*  26E9 */ '⛩', // ⛩ E0.7 shinto shrine
-  /*  26F0 */ '⛰', // ⛰ E0.7 mountain
-  /*  26F1 */ '⛱', // ⛱ E0.7 umbrella on ground
-  /*  26F4 */ '⛴', // ⛴ E0.7 ferry
-  /*  26F7 */ '⛷', // ⛷ E0.7 skier
-  /*  26F8 */ '⛸', // ⛸ E0.7 ice skate
-  /*  26F9 */ '⛹', // ⛹ E0.7 person bouncing ball
-  /*  2702 */ '✂', // ✂ E0.6 scissors
-  /*  2708 */ '✈', // ✈ E0.6 airplane
-  /*  2709 */ '✉', // ✉ E0.6 envelope
-  /*  270C */ '✌', // ✌ E0.6 victory hand
-  /*  270D */ '✍', // ✍ E0.7 writing hand
-  /*  270F */ '✏', // ✏ E0.6 pencil
-  /*  2712 */ '✒', // ✒ E0.6 black nib
-  /*  2714 */ '✔', // ✔ E0.6 check mark
-  /*  2716 */ '✖', // ✖ E0.6 multiply
-  /*  271D */ '✝', // ✝ E0.7 latin cross
-  /*  2721 */ '✡', // ✡ E0.7 star of David
-  /*  2733 */ '✳', // ✳ E0.6 eight-spoked asterisk
-  /*  2734 */ '✴', // ✴ E0.6 eight-pointed star
-  /*  2744 */ '❄', // ❄ E0.6 snowflake
-  /*  2747 */ '❇', // ❇ E0.6 sparkle
-  /*  2763 */ '❣', // ❣ E1.0 heart exclamation
-  /*  2764 */ '❤', // ❤ E0.6 red heart
-  /*  27A1 */ '➡', // ➡ E0.6 right arrow
-  /*  2934 */ '⤴', // ⤴ E0.6 right arrow curving up
-  /*  2935 */ '⤵', // ⤵ E0.6 right arrow curving down
-  /*  2B05 */ '⬅', // ⬅ E0.6 left arrow
-  /*  2B06 */ '⬆', // ⬆ E0.6 up arrow
-  /*  2B07 */ '⬇', // ⬇ E0.6 down arrow
-  /* 1F170 */ '🅰', // 🅰 E0.6 A button (blood type)
-  /* 1F171 */ '🅱', // 🅱 E0.6 B button (blood type)
-  /* 1F17E */ '🅾', // 🅾 E0.6 O button (blood type)
-  /* 1F17F */ '🅿', // 🅿 E0.6 P button
-  /* 1F321 */ '🌡', // 🌡 E0.7 thermometer
-  /* 1F324 */ '🌤', // 🌤 E0.7 sun behind small cloud
-  /* 1F325 */ '🌥', // 🌥 E0.7 sun behind large cloud
-  /* 1F326 */ '🌦', // 🌦 E0.7 sun behind rain cloud
-  /* 1F327 */ '🌧', // 🌧 E0.7 cloud with rain
-  /* 1F328 */ '🌨', // 🌨 E0.7 cloud with snow
-  /* 1F329 */ '🌩', // 🌩 E0.7 cloud with lightning
-  /* 1F32A */ '🌪', // 🌪 E0.7 tornado
-  /* 1F32B */ '🌫', // 🌫 E0.7 fog
-  /* 1F32C */ '🌬', // 🌬 E0.7 wind face
-  /* 1F336 */ '🌶', // 🌶 E0.7 hot pepper
-  /* 1F37D */ '🍽', // 🍽 E0.7 fork and knife with plate
-  /* 1F396 */ '🎖', // 🎖 E0.7 military medal
-  /* 1F397 */ '🎗', // 🎗 E0.7 reminder ribbon
-  /* 1F399 */ '🎙', // 🎙 E0.7 studio microphone
-  /* 1F39A */ '🎚', // 🎚 E0.7 level slider
-  /* 1F39B */ '🎛', // 🎛 E0.7 control knobs
-  /* 1F39E */ '🎞', // 🎞 E0.7 film frames
-  /* 1F39F */ '🎟', // 🎟 E0.7 admission tickets
-  /* 1F3CB */ '🏋', // 🏋 E0.7 person lifting weights
-  /* 1F3CC */ '🏌', // 🏌 E0.7 person golfing
-  /* 1F3CD */ '🏍', // 🏍 E0.7 motorcycle
-  /* 1F3CE */ '🏎', // 🏎 E0.7 racing car
-  /* 1F3D4 */ '🏔', // 🏔 E0.7 snow-capped mountain
-  /* 1F3D5 */ '🏕', // 🏕 E0.7 camping
-  /* 1F3D6 */ '🏖', // 🏖 E0.7 beach with umbrella
-  /* 1F3D7 */ '🏗', // 🏗 E0.7 building construction
-  /* 1F3D8 */ '🏘', // 🏘 E0.7 houses
-  /* 1F3D9 */ '🏙', // 🏙 E0.7 cityscape
-  /* 1F3DA */ '🏚', // 🏚 E0.7 derelict house
-  /* 1F3DB */ '🏛', // 🏛 E0.7 classical building
-  /* 1F3DC */ '🏜', // 🏜 E0.7 desert
-  /* 1F3DD */ '🏝', // 🏝 E0.7 desert island
-  /* 1F3DE */ '🏞', // 🏞 E0.7 national park
-  /* 1F3DF */ '🏟', // 🏟 E0.7 stadium
-  /* 1F3F3 */ '🏳', // 🏳 E0.7 white flag
-  /* 1F3F5 */ '🏵', // 🏵 E0.7 rosette
-  /* 1F3F7 */ '🏷', // 🏷 E0.7 label
-  /* 1F43F */ '🐿', // 🐿 E0.7 chipmunk
-  /* 1F441 */ '👁', // 👁 E0.7 eye
-  /* 1F4FD */ '📽', // 📽 E0.7 film projector
-  /* 1F549 */ '🕉', // 🕉 E0.7 om
-  /* 1F54A */ '🕊', // 🕊 E0.7 dove
-  /* 1F56F */ '🕯', // 🕯 E0.7 candle
-  /* 1F570 */ '🕰', // 🕰 E0.7 mantelpiece clock
-  /* 1F573 */ '🕳', // 🕳 E0.7 hole
-  /* 1F574 */ '🕴', // 🕴 E0.7 person in suit levitating
-  /* 1F575 */ '🕵', // 🕵 E0.7 detective
-  /* 1F576 */ '🕶', // 🕶 E0.7 sunglasses
-  /* 1F577 */ '🕷', // 🕷 E0.7 spider
-  /* 1F578 */ '🕸', // 🕸 E0.7 spider web
-  /* 1F579 */ '🕹', // 🕹 E0.7 joystick
-  /* 1F587 */ '🖇', // 🖇 E0.7 linked paperclips
-  /* 1F58A */ '🖊', // 🖊 E0.7 pen
-  /* 1F58B */ '🖋', // 🖋 E0.7 fountain pen
-  /* 1F58C */ '🖌', // 🖌 E0.7 paintbrush
-  /* 1F58D */ '🖍', // 🖍 E0.7 crayon
-  /* 1F590 */ '🖐', // 🖐 E0.7 hand with fingers splayed
-  /* 1F5A5 */ '🖥', // 🖥 E0.7 desktop computer
-  /* 1F5A8 */ '🖨', // 🖨 E0.7 printer
-  /* 1F5B1 */ '🖱', // 🖱 E0.7 computer mouse
-  /* 1F5B2 */ '🖲', // 🖲 E0.7 trackball
-  /* 1F5BC */ '🖼', // 🖼 E0.7 framed picture
-  /* 1F5C2 */ '🗂', // 🗂 E0.7 card index dividers
-  /* 1F5C3 */ '🗃', // 🗃 E0.7 card file box
-  /* 1F5C4 */ '🗄', // 🗄 E0.7 file cabinet
-  /* 1F5D1 */ '🗑', // 🗑 E0.7 wastebasket
-  /* 1F5D2 */ '🗒', // 🗒 E0.7 spiral notepad
-  /* 1F5D3 */ '🗓', // 🗓 E0.7 spiral calendar
-  /* 1F5DC */ '🗜', // 🗜 E0.7 clamp
-  /* 1F5DD */ '🗝', // 🗝 E0.7 old key
-  /* 1F5DE */ '🗞', // 🗞 E0.7 rolled-up newspaper
-  /* 1F5E1 */ '🗡', // 🗡 E0.7 dagger
-  /* 1F5E3 */ '🗣', // 🗣 E0.7 speaking head
-  /* 1F5E8 */ '🗨', // 🗨 E2.0 left speech bubble
-  /* 1F5EF */ '🗯', // 🗯 E0.7 right anger bubble
-  /* 1F5F3 */ '🗳', // 🗳 E0.7 ballot box with ballot
-  /* 1F5FA */ '🗺', // 🗺 E0.7 world map
-  /* 1F6CB */ '🛋', // 🛋 E0.7 couch and lamp
-  /* 1F6CD */ '🛍', // 🛍 E0.7 shopping bags
-  /* 1F6CE */ '🛎', // 🛎 E0.7 bellhop bell
-  /* 1F6CF */ '🛏', // 🛏 E0.7 bed
-  /* 1F6E0 */ '🛠', // 🛠 E0.7 hammer and wrench
-  /* 1F6E1 */ '🛡', // 🛡 E0.7 shield
-  /* 1F6E2 */ '🛢', // 🛢 E0.7 oil drum
-  /* 1F6E3 */ '🛣', // 🛣 E0.7 motorway
-  /* 1F6E4 */ '🛤', // 🛤 E0.7 railway track
-  /* 1F6E5 */ '🛥', // 🛥 E0.7 motor boat
-  /* 1F6E9 */ '🛩', // 🛩 E0.7 small airplane
-  /* 1F6F0 */ '🛰', // 🛰 E0.7 satellite
-  /* 1F6F3 */ '🛳', // 🛳 E0.7 passenger ship
+  /*  00A9 */ '©', // (1.1) COPYRIGHT SIGN
+  /*  00AE */ '®', // (1.1) REGISTERED SIGN
+  /*  203C */ '‼', // (1.1) DOUBLE EXCLAMATION MARK
+  /*  2049 */ '⁉', // (3.0) EXCLAMATION QUESTION MARK
+  /*  2122 */ '™', // (1.1) TRADE MARK SIGN
+  /*  2139 */ 'ℹ', // (3.0) INFORMATION SOURCE
+  /*  2194 */ '↔', // (1.1) LEFT RIGHT ARROW
+  /*  2195 */ '↕', // (1.1) UP DOWN ARROW
+  /*  2196 */ '↖', // (1.1) NORTH WEST ARROW
+  /*  2197 */ '↗', // (1.1) NORTH EAST ARROW
+  /*  2198 */ '↘', // (1.1) SOUTH EAST ARROW
+  /*  2199 */ '↙', // (1.1) SOUTH WEST ARROW
+  /*  21A9 */ '↩', // (1.1) LEFTWARDS ARROW WITH HOOK
+  /*  21AA */ '↪', // (1.1) RIGHTWARDS ARROW WITH HOOK
+  /*  2328 */ '⌨', // (1.1) KEYBOARD
+  /*  23CF */ '⏏', // (4.0) EJECT SYMBOL
+  /*  23ED */ '⏭', // (6.0) BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR
+  /*  23EE */ '⏮', // (6.0) BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR
+  /*  23EF */ '⏯', // (6.0) BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR
+  /*  23F1 */ '⏱', // (6.0) STOPWATCH
+  /*  23F2 */ '⏲', // (6.0) TIMER CLOCK
+  /*  23F8 */ '⏸', // (7.0) DOUBLE VERTICAL BAR
+  /*  23F9 */ '⏹', // (7.0) BLACK SQUARE FOR STOP
+  /*  23FA */ '⏺', // (7.0) BLACK CIRCLE FOR RECORD
+  /*  24C2 */ 'Ⓜ', // (1.1) CIRCLED LATIN CAPITAL LETTER M
+  /*  25AA */ '▪', // (1.1) BLACK SMALL SQUARE
+  /*  25AB */ '▫', // (1.1) WHITE SMALL SQUARE
+  /*  25B6 */ '▶', // (1.1) BLACK RIGHT-POINTING TRIANGLE
+  /*  25C0 */ '◀', // (1.1) BLACK LEFT-POINTING TRIANGLE
+  /*  25FB */ '◻', // (3.2) WHITE MEDIUM SQUARE
+  /*  25FC */ '◼', // (3.2) BLACK MEDIUM SQUARE
+  /*  2600 */ '☀', // (1.1) BLACK SUN WITH RAYS
+  /*  2601 */ '☁', // (1.1) CLOUD
+  /*  2602 */ '☂', // (1.1) UMBRELLA
+  /*  2603 */ '☃', // (1.1) SNOWMAN
+  /*  2604 */ '☄', // (1.1) COMET
+  /*  260E */ '☎', // (1.1) BLACK TELEPHONE
+  /*  2611 */ '☑', // (1.1) BALLOT BOX WITH CHECK
+  /*  2618 */ '☘', // (4.1) SHAMROCK
+  /*  261D */ '☝', // (1.1) WHITE UP POINTING INDEX
+  /*  2620 */ '☠', // (1.1) SKULL AND CROSSBONES
+  /*  2622 */ '☢', // (1.1) RADIOACTIVE SIGN
+  /*  2623 */ '☣', // (1.1) BIOHAZARD SIGN
+  /*  2626 */ '☦', // (1.1) ORTHODOX CROSS
+  /*  262A */ '☪', // (1.1) STAR AND CRESCENT
+  /*  262E */ '☮', // (1.1) PEACE SYMBOL
+  /*  262F */ '☯', // (1.1) YIN YANG
+  /*  2638 */ '☸', // (1.1) WHEEL OF DHARMA
+  /*  2639 */ '☹', // (1.1) WHITE FROWNING FACE
+  /*  263A */ '☺', // (1.1) WHITE SMILING FACE
+  /*  2640 */ '♀', // (1.1) FEMALE SIGN
+  /*  2642 */ '♂', // (1.1) MALE SIGN
+  /*  265F */ '♟', // (1.1) BLACK CHESS PAWN
+  /*  2660 */ '♠', // (1.1) BLACK SPADE SUIT
+  /*  2663 */ '♣', // (1.1) BLACK CLUB SUIT
+  /*  2665 */ '♥', // (1.1) BLACK HEART SUIT
+  /*  2666 */ '♦', // (1.1) BLACK DIAMOND SUIT
+  /*  2668 */ '♨', // (1.1) HOT SPRINGS
+  /*  267B */ '♻', // (3.2) BLACK UNIVERSAL RECYCLING SYMBOL
+  /*  267E */ '♾', // (4.1) PERMANENT PAPER SIGN
+  /*  2692 */ '⚒', // (4.1) HAMMER AND PICK
+  /*  2694 */ '⚔', // (4.1) CROSSED SWORDS
+  /*  2695 */ '⚕', // (4.1) STAFF OF AESCULAPIUS
+  /*  2696 */ '⚖', // (4.1) SCALES
+  /*  2697 */ '⚗', // (4.1) ALEMBIC
+  /*  2699 */ '⚙', // (4.1) GEAR
+  /*  269B */ '⚛', // (4.1) ATOM SYMBOL
+  /*  269C */ '⚜', // (4.1) FLEUR-DE-LIS
+  /*  26A0 */ '⚠', // (4.0) WARNING SIGN
+  /*  26A7 */ '⚧', // (4.1) MALE WITH STROKE AND MALE AND FEMALE SIGN
+  /*  26B0 */ '⚰', // (4.1) COFFIN
+  /*  26B1 */ '⚱', // (4.1) FUNERAL URN
+  /*  26C8 */ '⛈', // (5.2) THUNDER CLOUD AND RAIN
+  /*  26CF */ '⛏', // (5.2) PICK
+  /*  26D1 */ '⛑', // (5.2) HELMET WITH WHITE CROSS
+  /*  26D3 */ '⛓', // (5.2) CHAINS
+  /*  26E9 */ '⛩', // (5.2) SHINTO SHRINE
+  /*  26F0 */ '⛰', // (5.2) MOUNTAIN
+  /*  26F1 */ '⛱', // (5.2) UMBRELLA ON GROUND
+  /*  26F4 */ '⛴', // (5.2) FERRY
+  /*  26F7 */ '⛷', // (5.2) SKIER
+  /*  26F8 */ '⛸', // (5.2) ICE SKATE
+  /*  26F9 */ '⛹', // (5.2) PERSON WITH BALL
+  /*  2702 */ '✂', // (1.1) BLACK SCISSORS
+  /*  2708 */ '✈', // (1.1) AIRPLANE
+  /*  2709 */ '✉', // (1.1) ENVELOPE
+  /*  270C */ '✌', // (1.1) VICTORY HAND
+  /*  270D */ '✍', // (1.1) WRITING HAND
+  /*  270F */ '✏', // (1.1) PENCIL
+  /*  2712 */ '✒', // (1.1) BLACK NIB
+  /*  2714 */ '✔', // (1.1) HEAVY CHECK MARK
+  /*  2716 */ '✖', // (1.1) HEAVY MULTIPLICATION X
+  /*  271D */ '✝', // (1.1) LATIN CROSS
+  /*  2721 */ '✡', // (1.1) STAR OF DAVID
+  /*  2733 */ '✳', // (1.1) EIGHT SPOKED ASTERISK
+  /*  2734 */ '✴', // (1.1) EIGHT POINTED BLACK STAR
+  /*  2744 */ '❄', // (1.1) SNOWFLAKE
+  /*  2747 */ '❇', // (1.1) SPARKLE
+  /*  2763 */ '❣', // (1.1) HEAVY HEART EXCLAMATION MARK ORNAMENT
+  /*  2764 */ '❤', // (1.1) HEAVY BLACK HEART
+  /*  27A1 */ '➡', // (1.1) BLACK RIGHTWARDS ARROW
+  /*  2934 */ '⤴', // (3.2) ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
+  /*  2935 */ '⤵', // (3.2) ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
+  /*  2B05 */ '⬅', // (4.0) LEFTWARDS BLACK ARROW
+  /*  2B06 */ '⬆', // (4.0) UPWARDS BLACK ARROW
+  /*  2B07 */ '⬇', // (4.0) DOWNWARDS BLACK ARROW
+  /* 1F170 */ '🅰', // (6.0) NEGATIVE SQUARED LATIN CAPITAL LETTER A
+  /* 1F171 */ '🅱', // (6.0) NEGATIVE SQUARED LATIN CAPITAL LETTER B
+  /* 1F17E */ '🅾', // (6.0) NEGATIVE SQUARED LATIN CAPITAL LETTER O
+  /* 1F17F */ '🅿', // (5.2) NEGATIVE SQUARED LATIN CAPITAL LETTER P
+  /* 1F321 */ '🌡', // (7.0) THERMOMETER
+  /* 1F324 */ '🌤', // (7.0) WHITE SUN WITH SMALL CLOUD
+  /* 1F325 */ '🌥', // (7.0) WHITE SUN BEHIND CLOUD
+  /* 1F326 */ '🌦', // (7.0) WHITE SUN BEHIND CLOUD WITH RAIN
+  /* 1F327 */ '🌧', // (7.0) CLOUD WITH RAIN
+  /* 1F328 */ '🌨', // (7.0) CLOUD WITH SNOW
+  /* 1F329 */ '🌩', // (7.0) CLOUD WITH LIGHTNING
+  /* 1F32A */ '🌪', // (7.0) CLOUD WITH TORNADO
+  /* 1F32B */ '🌫', // (7.0) FOG
+  /* 1F32C */ '🌬', // (7.0) WIND BLOWING FACE
+  /* 1F336 */ '🌶', // (7.0) HOT PEPPER
+  /* 1F37D */ '🍽', // (7.0) FORK AND KNIFE WITH PLATE
+  /* 1F396 */ '🎖', // (7.0) MILITARY MEDAL
+  /* 1F397 */ '🎗', // (7.0) REMINDER RIBBON
+  /* 1F399 */ '🎙', // (7.0) STUDIO MICROPHONE
+  /* 1F39A */ '🎚', // (7.0) LEVEL SLIDER
+  /* 1F39B */ '🎛', // (7.0) CONTROL KNOBS
+  /* 1F39E */ '🎞', // (7.0) FILM FRAMES
+  /* 1F39F */ '🎟', // (7.0) ADMISSION TICKETS
+  /* 1F3CB */ '🏋', // (7.0) WEIGHT LIFTER
+  /* 1F3CC */ '🏌', // (7.0) GOLFER
+  /* 1F3CD */ '🏍', // (7.0) RACING MOTORCYCLE
+  /* 1F3CE */ '🏎', // (7.0) RACING CAR
+  /* 1F3D4 */ '🏔', // (7.0) SNOW CAPPED MOUNTAIN
+  /* 1F3D5 */ '🏕', // (7.0) CAMPING
+  /* 1F3D6 */ '🏖', // (7.0) BEACH WITH UMBRELLA
+  /* 1F3D7 */ '🏗', // (7.0) BUILDING CONSTRUCTION
+  /* 1F3D8 */ '🏘', // (7.0) HOUSE BUILDINGS
+  /* 1F3D9 */ '🏙', // (7.0) CITYSCAPE
+  /* 1F3DA */ '🏚', // (7.0) DERELICT HOUSE BUILDING
+  /* 1F3DB */ '🏛', // (7.0) CLASSICAL BUILDING
+  /* 1F3DC */ '🏜', // (7.0) DESERT
+  /* 1F3DD */ '🏝', // (7.0) DESERT ISLAND
+  /* 1F3DE */ '🏞', // (7.0) NATIONAL PARK
+  /* 1F3DF */ '🏟', // (7.0) STADIUM
+  /* 1F3F3 */ '🏳', // (7.0) WAVING WHITE FLAG
+  /* 1F3F5 */ '🏵', // (7.0) ROSETTE
+  /* 1F3F7 */ '🏷', // (7.0) LABEL
+  /* 1F43F */ '🐿', // (7.0) CHIPMUNK
+  /* 1F441 */ '👁', // (7.0) EYE
+  /* 1F4FD */ '📽', // (7.0) FILM PROJECTOR
+  /* 1F549 */ '🕉', // (7.0) OM SYMBOL
+  /* 1F54A */ '🕊', // (7.0) DOVE OF PEACE
+  /* 1F56F */ '🕯', // (7.0) CANDLE
+  /* 1F570 */ '🕰', // (7.0) MANTELPIECE CLOCK
+  /* 1F573 */ '🕳', // (7.0) HOLE
+  /* 1F574 */ '🕴', // (7.0) MAN IN BUSINESS SUIT LEVITATING
+  /* 1F575 */ '🕵', // (7.0) SLEUTH OR SPY
+  /* 1F576 */ '🕶', // (7.0) DARK SUNGLASSES
+  /* 1F577 */ '🕷', // (7.0) SPIDER
+  /* 1F578 */ '🕸', // (7.0) SPIDER WEB
+  /* 1F579 */ '🕹', // (7.0) JOYSTICK
+  /* 1F587 */ '🖇', // (7.0) LINKED PAPERCLIPS
+  /* 1F58A */ '🖊', // (7.0) LOWER LEFT BALLPOINT PEN
+  /* 1F58B */ '🖋', // (7.0) LOWER LEFT FOUNTAIN PEN
+  /* 1F58C */ '🖌', // (7.0) LOWER LEFT PAINTBRUSH
+  /* 1F58D */ '🖍', // (7.0) LOWER LEFT CRAYON
+  /* 1F590 */ '🖐', // (7.0) RAISED HAND WITH FINGERS SPLAYED
+  /* 1F5A5 */ '🖥', // (7.0) DESKTOP COMPUTER
+  /* 1F5A8 */ '🖨', // (7.0) PRINTER
+  /* 1F5B1 */ '🖱', // (7.0) THREE BUTTON MOUSE
+  /* 1F5B2 */ '🖲', // (7.0) TRACKBALL
+  /* 1F5BC */ '🖼', // (7.0) FRAME WITH PICTURE
+  /* 1F5C2 */ '🗂', // (7.0) CARD INDEX DIVIDERS
+  /* 1F5C3 */ '🗃', // (7.0) CARD FILE BOX
+  /* 1F5C4 */ '🗄', // (7.0) FILE CABINET
+  /* 1F5D1 */ '🗑', // (7.0) WASTEBASKET
+  /* 1F5D2 */ '🗒', // (7.0) SPIRAL NOTE PAD
+  /* 1F5D3 */ '🗓', // (7.0) SPIRAL CALENDAR PAD
+  /* 1F5DC */ '🗜', // (7.0) COMPRESSION
+  /* 1F5DD */ '🗝', // (7.0) OLD KEY
+  /* 1F5DE */ '🗞', // (7.0) ROLLED-UP NEWSPAPER
+  /* 1F5E1 */ '🗡', // (7.0) DAGGER KNIFE
+  /* 1F5E3 */ '🗣', // (7.0) SPEAKING HEAD IN SILHOUETTE
+  /* 1F5E8 */ '🗨', // (7.0) LEFT SPEECH BUBBLE
+  /* 1F5EF */ '🗯', // (7.0) RIGHT ANGER BUBBLE
+  /* 1F5F3 */ '🗳', // (7.0) BALLOT BOX WITH BALLOT
+  /* 1F5FA */ '🗺', // (7.0) WORLD MAP
+  /* 1F6CB */ '🛋', // (7.0) COUCH AND LAMP
+  /* 1F6CD */ '🛍', // (7.0) SHOPPING BAGS
+  /* 1F6CE */ '🛎', // (7.0) BELLHOP BELL
+  /* 1F6CF */ '🛏', // (7.0) BED
+  /* 1F6E0 */ '🛠', // (7.0) HAMMER AND WRENCH
+  /* 1F6E1 */ '🛡', // (7.0) SHIELD
+  /* 1F6E2 */ '🛢', // (7.0) OIL DRUM
+  /* 1F6E3 */ '🛣', // (7.0) MOTORWAY
+  /* 1F6E4 */ '🛤', // (7.0) RAILWAY TRACK
+  /* 1F6E5 */ '🛥', // (7.0) MOTOR BOAT
+  /* 1F6E9 */ '🛩', // (7.0) SMALL AIRPLANE
+  /* 1F6F0 */ '🛰', // (7.0) SATELLITE
+  /* 1F6F3 */ '🛳', // (7.0) PASSENGER SHIP
 ]
 
 export const narrowEmojiCodePoints = [

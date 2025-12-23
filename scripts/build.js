@@ -8,31 +8,32 @@ import writePrettierFile from 'write-prettier-file'
 import {downloadText, updateFile} from './utilities.js'
 
 const DATA_URL = new URL(
-  'https://www.unicode.org/Public/latest/emoji/emoji-test.txt',
+  'https://unicode.org/Public/latest/ucd/emoji/emoji-variation-sequences.txt',
 )
 const CACHE_DIRECTORY = new URL('../.cache/', import.meta.url)
 
 function* parse(text) {
   const lines = text.split('\n')
+
   for (const line of lines) {
     if (!line || line.startsWith('#')) {
       continue
     }
 
-    const codePointsEndIndex = line.indexOf('; ')
-    assert.ok(codePointsEndIndex !== -1)
-    const codePoints = line.slice(0, codePointsEndIndex).trim().split(' ')
-    const character = String.fromCodePoint(
-      ...codePoints.map((hex) => Number.parseInt(hex, 16)),
-    )
+    const [codePoints, , description] = line
+      .split(';')
+      .map((part) => part.trim())
 
-    const statusEndIndex = line.indexOf('# ', codePointsEndIndex)
-    assert.ok(statusEndIndex !== -1)
+    assert.ok(description.startsWith('# '))
 
-    const status = line.slice(codePointsEndIndex + 2, statusEndIndex).trim()
-    const explanation = line.slice(statusEndIndex + 2)
+    if (codePoints.endsWith(' FE0E')) {
+      const codePoint = codePoints.slice(0, -5)
+      const character = String.fromCodePoint(Number.parseInt(codePoint, 16))
+      yield {character, codePoint, description: description.slice(2)}
+      continue
+    }
 
-    yield {codePoints, character, status, explanation}
+    assert.ok(codePoints.endsWith(' FE0F'))
   }
 }
 
@@ -49,15 +50,12 @@ const isSingleEmoji = (character) => {
 
 const text = await downloadText(
   DATA_URL,
-  new URL('./emoji-test.txt', CACHE_DIRECTORY),
+  new URL('./emoji-variation-sequences.txt', CACHE_DIRECTORY),
 )
 
 const array = parse(text)
   .filter(
-    ({character, codePoints}) =>
-      codePoints.length === 1 &&
-      isSingleEmoji(character) &&
-      stringWidth(character) === 1,
+    ({character}) => isSingleEmoji(character) && stringWidth(character) === 1,
   )
   .toArray()
   .toSorted(
@@ -71,7 +69,7 @@ assert.equal(new Set(string).size, array.length)
 assert.equal([...string].length, array.length)
 
 const maxCodePointsLength = Math.max(
-  ...array.map(({codePoints}) => codePoints.join(' ').length),
+  ...array.map(({codePoint}) => codePoint.length),
 )
 
 await writePrettierFile(
@@ -79,11 +77,11 @@ await writePrettierFile(
   outdent`
     export const narrowEmojiCharacters = [
       ${array
-        .map(({character, codePoints, explanation}) =>
+        .map(({character, codePoint, description}) =>
           [
-            `/* ${codePoints.join(' ').padStart(maxCodePointsLength)} */`,
+            `/* ${codePoint.padStart(maxCodePointsLength)} */`,
             `${JSON.stringify(character)},`,
-            `// ${explanation}`,
+            `// ${description}`,
           ].join(' '),
         )
         .join('\n')}
