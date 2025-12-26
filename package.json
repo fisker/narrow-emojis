@@ -69,6 +69,7 @@
     "del-cli": "7.0.0",
     "emoji-regex": "10.6.0",
     "eslint": "9.39.2",
+    "get-east-asian-width": "1.4.0",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "markdownlint-cli2": "0.20.0",
