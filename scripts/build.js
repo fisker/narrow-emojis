@@ -102,7 +102,7 @@ await writePrettierFile(
       .toString()})$/;
 
     export const isNarrowEmojiCharacter = character => narrowEmojiRegexp.test(character);
-    const narrowEmojiCodePointsSet = new Set(narrowEmojiCodePoints)
+    const narrowEmojiCodePointsSet = /* @__PURE__ */ new Set(narrowEmojiCodePoints)
     export const isNarrowEmojiCodePoint = codePoint => narrowEmojiCodePointsSet.has(codePoint);
   `,
 )
