@@ -4,7 +4,6 @@ import emojiRegex from 'emoji-regex'
 import {eastAsianWidth} from 'get-east-asian-width'
 import {outdent} from 'outdent'
 import regenerate from 'regenerate'
-import stringWidth from 'string-width'
 import writePrettierFile from 'write-prettier-file'
 import {downloadText, updateFile} from './utilities.js'
 
