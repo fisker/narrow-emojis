@@ -1,9 +1,9 @@
 import assert from 'node:assert'
 import {inspect} from 'node:util'
 import emojiRegex from 'emoji-regex'
+import {eastAsianWidth} from 'get-east-asian-width'
 import {outdent} from 'outdent'
 import regenerate from 'regenerate'
-import stringWidth from 'string-width'
 import writePrettierFile from 'write-prettier-file'
 import {downloadText, updateFile} from './utilities.js'
 
@@ -55,7 +55,13 @@ const text = await downloadText(
 
 const array = parse(text)
   .filter(
-    ({character}) => isSingleEmoji(character) && stringWidth(character) === 1,
+    ({character}) =>
+      // These characters requires `U+FE0F`(VS16) to be Emoji
+      isSingleEmoji(character) &&
+      // ... unless they have `Emoji_Presentation = yes`
+      // https://github.com/mathiasbynens/emoji-regex/issues/61#issuecomment-714500889
+      /^\P{Emoji_Presentation}$/v.test(character) &&
+      eastAsianWidth(character.codePointAt(0), {ambiguousAsWide: false}) === 1,
   )
   .toArray()
   .toSorted(
