@@ -55,7 +55,12 @@ const text = await downloadText(
 
 const array = parse(text)
   .filter(
-    ({character}) => isSingleEmoji(character) && stringWidth(character) === 1,
+    ({character}) =>
+      // These characters requires `U+FE0F`(VS16) to be Emoji
+      isSingleEmoji(character) &&
+      // Unless they have `Emoji_Presentation = yes`
+      // https://github.com/mathiasbynens/emoji-regex/issues/61#issuecomment-714500889
+      /^\P{Emoji_Presentation}$/v.test(character),
   )
   .toArray()
   .toSorted(
