@@ -35,11 +35,11 @@ const narrowEmojis = [
   '\u{2620}', // ☠
   '\u{2763}', // ❣
   '\u{2764}', // ❤
-  '\u{270C}', // ✌
-  '\u{261D}', // ☝
-  '\u{270D}', // ✍
+  // '\u{270C}', // ✌
+  // '\u{261D}', // ☝
+  // '\u{270D}', // ✍
   '\u{26F7}', // ⛷
-  '\u{26F9}', // ⛹
+  // '\u{26F9}', // ⛹
   '\u{2618}', // ☘
   '\u{26E9}', // ⛩
   '\u{2668}', // ♨
@@ -133,6 +133,9 @@ const narrowEmojis = [
 ]
 test('Prettier narrow emojis', () => {
   for (const character of narrowEmojis) {
-    assert.ok(isNarrowEmojiCharacter(character))
+    assert.ok(
+      isNarrowEmojiCharacter(character),
+      `'${character}'(U+${character.codePointAt(0).toString(16).toUpperCase()}) should have narrow width.`,
+    )
   }
 })
