@@ -61,6 +61,7 @@ const array = parse(text)
       // ... unless they have `Emoji_Presentation = yes`
       // https://github.com/mathiasbynens/emoji-regex/issues/61#issuecomment-714500889
       /^\P{Emoji_Presentation}$/v.test(character) &&
+      /^\P{Emoji_Modifier_Base}$/v.test(character) &&
       eastAsianWidth(character.codePointAt(0), {ambiguousAsWide: false}) === 1,
   )
   .toArray()

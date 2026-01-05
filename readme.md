@@ -34,13 +34,13 @@ import {
 } from 'narrow-emojis'
 
 console.log(narrowEmojiCharacters)
-// -> [ '©', '®', '‼', ... 198 more items ]
+// -> [ '©', '®', '‼', ... 189 more items ]
 
 console.log(narrowEmojiCodePoints)
-// -> [ 169, 174, 8252, ... 198 more items ]
+// -> [ 169, 174, 8252, ... 189 more items ]
 
 console.log(new Set(narrowEmojiString))
-// -> Set(201) { '©', '®', '‼', ... 198 more items }
+// -> Set(192) { '©', '®', '‼', ... 189 more items }
 
 console.log(narrowEmojiRegexp.test('©'))
 // -> true
