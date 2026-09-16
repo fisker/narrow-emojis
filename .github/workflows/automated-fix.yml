@@ -9,7 +9,7 @@ concurrency:
 
 jobs:
   fix:
-    if: github.repository == 'fisker/gfm-test-suite'
+    if: github.repository == 'fisker/narrow-emojis'
     name: Run automated fix
     permissions: {}
     uses: fisker/shared-workflows/.github/workflows/automated-fix.yml@main
